@@ -18,3 +18,13 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+#Levarne Assignments
+
+1)ASSIGNMENT 1- Install Vue.js & Nuxt.js & start a project
+2)ASSIGNMENT 2 - Pages & Routing
+    Refer- pages/index.vue and pages/intro.vue
+3)Assignment # 3: Components, Buttons & Counters
+    Refer- components/counter.vue & pages/count.vue
+4)VueX Store, Actions, Mutations
+    Refer pages/messages/add.vue & pages/messages/read.vue
