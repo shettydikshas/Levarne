@@ -31,10 +31,12 @@ export default {
   modules:
     ['bootstrap-vue/nuxt','@nuxtjs/axios'],
   bootstrapVue: {
-    icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
+    icons: true, // Install the IconsPlugin (in addition to BootStrapVue plugin
+   // bootstrapCSS: false, // Or `css: false`
+   // bootstrapVueCSS: false // Or `bvCSS: false`
   },
   axios: {
-     proxy: true
+     //proxy: true
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

@@ -12,6 +12,7 @@ export default {
     
     }
     let response = await this.$axios(options);
+    console.log('echo action was hit')
     commit('setEchoResponse', response.data);
     }
 }

@@ -2,5 +2,8 @@
   export default{
 
     getMessages:(state)=>{return state.messages},
-    getContacts:(state)=>{return state.contacts}
+    getContacts:(state)=>{
+      console.log('Getters were hit')
+      return state.contacts
+    }
   }

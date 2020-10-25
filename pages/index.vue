@@ -1,13 +1,7 @@
-<template>
-  <div id="root" class="index">
-    <Header/>
-   <!---- <b-img src="~/assets/index.jpg" fluid-grow alt="Responsive image"></b-img>
-  --->  
-  
-  <b-container>
-    
-  </b-container>
-  </div>
+<template lang="pug">
+#root
+  Header
+  b-container
 </template>
 
 <script>
@@ -19,9 +13,7 @@ export default {
 }
 </script>
 <style>
-.index{
- /* background-color: #F0F0F0;
-  background-image: linear-gradient(to right,white ,lightgray);*/
+#root{
   background: url('/index.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -1,10 +1,7 @@
-<template>
-<div id="counter">
-    <Header/>
-    <Counter/>
-    <br>
-</div>
-    
+<template lang="pug">
+#counter
+  Header
+  Counter
 </template>
 <script>
 import Header from '~/components/Header'
