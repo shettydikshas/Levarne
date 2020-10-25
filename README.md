@@ -24,7 +24,12 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 1)ASSIGNMENT 1- Install Vue.js & Nuxt.js & start a project
 2)ASSIGNMENT 2 - Pages & Routing
     Refer- pages/index.vue and pages/intro.vue
-3)Assignment # 3: Components, Buttons & Counters
+
+3)Assignment 3: Components, Buttons & Counters
     Refer- components/counter.vue & pages/count.vue
-4)VueX Store, Actions, Mutations
-    Refer pages/messages/add.vue & pages/messages/read.vue
+
+4)Assignment 4: VueX Store, Actions, Mutations
+    Refer pages/messages/add.vue ,pages/messages/read.vue & store
+
+5)Assignment 5: Axios & API Calls in the VueX Store
+    Refer pages/contacts.vue & store

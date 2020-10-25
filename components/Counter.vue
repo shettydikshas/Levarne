@@ -2,11 +2,9 @@
 <div id="counter">
     
     <h3>Gallery</h3>
-    <b-img src="~/assets/img.jpg" fluid alt="Fluid image" style="max-width: 20rem;"></b-img>
-   
-     <b-card
-    title="Amsterdam"
-  >
+    <b-img src="/img.jpg" fluid alt="Fluid image" style="max-width: 20rem;">
+    </b-img>
+    <b-card title="Amsterdam">
     <b-card-text>
       Likes on this post is:
     <button>{{count}}</button>
@@ -30,5 +28,7 @@ export default {
 }
 </script>
 <style>
-
+img{
+  margin: 20px;
+}
 </style>

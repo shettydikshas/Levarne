@@ -28,9 +28,13 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules:['bootstrap-vue/nuxt'],
+  modules:
+    ['bootstrap-vue/nuxt','@nuxtjs/axios'],
   bootstrapVue: {
     icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
+  },
+  axios: {
+     proxy: true
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

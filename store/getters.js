@@ -1,6 +1,11 @@
 
   export default{
-    getMessages(state){
+  /*  getMessages(state){
       return state.messages
-    }
+    },
+    getContacts(state){
+      return state.contacts
+    },*/
+    getMessages:(state)=>{return state.messages},
+    getContacts:(state)=>{return state.contacts}
   }

@@ -1,3 +1,4 @@
 export default() =>({
-  messages:['Hello','World']
+  messages:['Hello','World'],
+  contacts:[]
 })

@@ -14,6 +14,11 @@
       Add Mesaages
     </NuxtLink>
     </b-jumbotron>
+    <b-card class="mt-3" header="Form Data Result">
+      <pre class="m-0" v-for="(data,index) in contacts" :key="index">
+          {{ data}}
+      </pre>
+    </b-card>
     
   </div>
 </template>
@@ -29,6 +34,7 @@ import Header from '~/components/Header'
     computed:{
       ...mapGetters({
           messages: 'getMessages',
+          contacts: 'getContacts'
       })
     },
     components:{

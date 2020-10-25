@@ -2,91 +2,98 @@
 <template>
    <div>
       <Header/>
-      <br>
-      
+      <b-container class="bv-example-row">
+      <b-col cols lg="8">
       <b-jumbotron>
-          <h1>Contact Us</h1>
+          <h1>CONTACT US</h1>
       <hr class="my-4" />
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+    <b-form @submit="onSubmit">
       <b-form-group
         id="input-group-1"
-        label="Email address:"
+        label="Name:"
         label-for="input-1"
-        description="We'll never share your email with anyone else."
       >
         <b-form-input
           id="input-1"
-          v-model="form.email"
-          type="email"
+          v-model="formData.name"
           required
-          placeholder="Enter email"
+          placeholder="Enter Name"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+      <b-form-group id="input-group-2" label="User Name:" label-for="input-2">
         <b-form-input
           id="input-2"
-          v-model="form.name"
+          v-model="formData.username"
           required
-          placeholder="Enter name"
+          placeholder="Enter UserName"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-5" label="Comment:" label-for="input-5">
-        <b-form-textarea
+      <b-form-group id="input-group-5" label="Email:" label-for="input-5">
+        <b-form-input
           id="input-5"
-          v-model="form.comment"
+          v-model="formData.email"
           required
-          placeholder="Enter Your Comment Here"
-          rows="3"
-          max-rows="6"
-        ></b-form-textarea>
+          placeholder="Email Id"
+          description="We'll never share your email with anyone else."
+        ></b-form-input>
       </b-form-group>
 
       <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
-      </b-jumbotron>
+      
     <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
+      <pre class="m-0"
+       v-for="(contact,index) in contacts" :key="index"
+       >
+       Name: {{ contact.name }}
+       UserName: {{ contact.username }}
+       Email: {{ contact.email }}
+       </pre>
     </b-card>
+    </b-jumbotron>
+      </b-col>
+      </b-container>
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header'
+import {mapGetters} from 'vuex'
+import {mapActions} from 'vuex'
   export default {
     data() {
       return {
-        form: {
-          email: '',
+        formData: {
           name: '',
-          comment:''
+          username: '',
+          email:''
         },
         show: true
       }
     },
     methods: {
+      ...mapActions(['echo']),
       onSubmit(evt) {
         evt.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.name = ''
-        this.form.comment=''
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
+        this.echo(this.formData)
+        console.log('Form Data '+this.formData)
+        this.formData=''
       }
+    },
+    computed:{
+      ...mapGetters({
+      contacts:'getContacts',
+    })
     },
      components:{
         Header
         }
   }
 </script>
-<style>
-</style>
+<style scoped>
+.jumbotron{
+margin-top:10px
+}
+</style>>
